@@ -5,5 +5,7 @@
 ## Технологии
 Frontend написан с помощью фреймворка React.
 
-## Адрес домена сервера
+## Адрес домена
 https://oe.movies.nomoredomains.sbs
+
+Макет лежит [тут](https://disk.yandex.ru/d/JAKo9voCUKh0UQ)
