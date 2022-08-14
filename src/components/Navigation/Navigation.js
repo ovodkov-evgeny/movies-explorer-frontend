@@ -34,8 +34,8 @@ export default function Navigation() {
         </li>
         <li className="navigation__link-item account">
           <Link to="/profile" className="account__link account__link_marked">
-            <p className="account__text">Аккаунт</p>
             <div className="account__icon" />
+            <p className="account__text">Аккаунт</p>
           </Link>
         </li>
       </ul>

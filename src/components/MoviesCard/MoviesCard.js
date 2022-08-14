@@ -7,36 +7,37 @@ export default function MoviesCard() {
   const [saved, setSaved] = useState();
   const location = useLocation();
 
-  const hangleActive = () => {
+  const handleActive = () => {
     setSaved(!saved);
   };
 
-  const hangleDelete = () => {
+  const handleDelete = () => {
     setSaved(false);
   };
 
   return (
     <li className="movies-card">
-      <img className="movies-card__image" src={image} alt="33 слова о дизайне" />
       <div className="movies-card__info">
-        <h3 className="movies-card__heading movies-card__text">33 слова о дизайне</h3>
-        <p className="movies-card__duration movies-card__text">1ч42м</p>
-        {location.pathname !== '/saved-movies' ? (
+        <h3 className="movies-card__heading movies-card__text">В погоне за Бенкси</h3>
+        <p className="movies-card__duration movies-card__text">27м</p>
+      </div>
+      <img className="movies-card__image" src={image} alt="В погоне за Бенкси" />
+      {location.pathname !== '/saved-movies' ? (
           <button
             className={`movies-card__button movies-card__save-button ${saved && 'movies-card__save-button_active'}`}
             type="button"
             aria-label="Сохранить"
-            onClick={hangleActive}
-          />
+            onClick={handleActive}
+          >Сохранить
+          </button>
         ) : (
           <button
             className="movies-card__button movies-card__delete-button"
             type="button"
-            aria-label="Сохранить"
-            onClick={hangleDelete}
+            aria-label="Удалить"
+            onClick={handleDelete}
           />
         )}
-      </div>
     </li>
   );
 }

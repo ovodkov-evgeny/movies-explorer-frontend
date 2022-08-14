@@ -28,12 +28,12 @@
 
 .filter-checkbox__switch-slider {
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 8px;
+  height: 8px;
   background: #ffffff;
   border-radius: 50%;
-  top: 2px;
-  left: 2px;
+  top: 6px;
+  left: 6px;
   transition: 0.3s;
   z-index: 2;
 }

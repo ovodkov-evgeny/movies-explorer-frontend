@@ -8,8 +8,8 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 32px 20px;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 32px 28px;
 }
 
 .movies-card-list__button-container {
