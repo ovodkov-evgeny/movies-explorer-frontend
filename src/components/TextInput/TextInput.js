@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './TextInput.css';
 
-export default function TextInput({ name, label, type }) {
-  const [message, setMessage] = useState();
-
-  const handleChange = (evt) => {
-    setMessage(evt.target.validationMessage);
-  };
+export default function TextInput({
+  name, label, type, value, onChange, errorMessage, pattern,
+}) {
 
   return (
     <label className="text-input" htmlFor={name}>
@@ -14,12 +11,14 @@ export default function TextInput({ name, label, type }) {
       <input
         className="text-input__input text-input__text"
         name={name}
+        id={name}
         type={type}
-        onChange={handleChange}
-        minLength={4}
+        value={value}
+        onChange={onChange}
+        pattern={pattern}
         required
       />
-      <span className="text-input__error text-input__text">{message}</span>
+      <span className="text-input__error text-input__text">{errorMessage}</span>
     </label>
   );
 }
